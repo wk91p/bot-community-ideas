@@ -66,5 +66,4 @@ If you contribute an idea, your username will be included alongside your suggest
 
 Made with ❤️ by @UnbreakabIe
 
-discord: @oqs0_
-highrise: @Unbreakable
+Discord: @oqs0_ | Highrise: @Unbreakable
