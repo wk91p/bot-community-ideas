@@ -39,6 +39,84 @@ This repository is intended as a simple place for the community to share ideas, 
 
 * **Bot support for teams & groups:** Allow bots to be added to teams or groups. This could be useful for group management and organization, such as managing members, deleting messages, or preventing invitations from being sent within groups.
 
+Ideas credited to @Community
+
+- Interactive buttons & menus: Bots should be able to send interactive buttons and menus to users. These could be used for:
+  
+  - Accept / Deny
+  - Confirm / Cancel
+  - Choose Red / Blue
+  - Select a wager
+  - Navigate to the next help page
+  - Join a game
+  - View balance
+  
+  Example:
+```py
+  await self.highrise.send_interactive_message(
+    "Accept @Community's 500g challenge?",
+    buttons=["Accept", "Deny"]
+)
+```
+  These buttons could be sent directly to users or displayed on-screen, allowing bots to create polls, games, confirmations, and other interactive experiences.
+
+- Expanded moderation permissions: With proper permission scopes, bots should be able to:
+  
+  - Temporarily mute users
+  - Remove users from a room
+  - Ban and unban users
+  - Delete specific messages
+  - Retrieve moderation status
+  - Detect repeated spam
+  - Read the room's moderator list
+  - Apply slow mode
+
+- Private bot testing environment: Developers should have a private environment where they can simulate events such as:
+  
+  - Users joining and leaving
+  - Tips of different amounts
+  - DMs
+  - Movement
+  - Disconnects
+  - Duplicate events
+  - Permission failures
+  
+  This would allow developers to safely test scenarios such as a 10,000g transaction without actually risking 10,000g.
+
+- Temporary interactive room objects: Bots could temporarily spawn interactive objects for events and games, such as:
+  
+  - Game tables
+  - Leaderboards
+  - Signs
+  - Prize wheels
+  - Voting booths
+  - Teleport pads
+  - Countdown displays
+  - Team markers
+  
+  These objects could automatically disappear when the event ends.
+
+- Interactive bot panels: Bots should be able to display customizable interactive panels containing text, buttons, and dropdown menus.
+  
+  Example:
+
+  ```py
+  panel = BotPanel(
+    title="Community Casino",
+    private=True
+)
+
+panel.add_text("Balance: 12,450g")
+panel.add_button("Coinflip", action="open_coinflip")
+panel.add_button("Slots", action="open_slots")
+panel.add_button("Withdraw", action="open_withdrawal")
+panel.add_dropdown("Wager", options=[100, 500, 1000, 5000])
+
+await self.highrise.show_panel(user.id, panel)
+```
+
+  This could provide a more flexible interface for games, utilities, menus, and other bot features without relying entirely on chat commands.
+
 ## Contributing
 
 Have an idea for a feature that would improve bots?
