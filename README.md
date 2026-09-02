@@ -26,10 +26,20 @@ This repository is intended as a simple place for the community to share ideas, 
 
 ### Ideas credited to @VECTOR000
 
-* **Room design & construction:** Allow bots to modify rooms in terms of design and construction. If a bot could access the coordinates and placement of all furniture, it could potentially copy existing rooms or automatically build rooms.
-* **Profile backgrounds:** Allow bots to add backgrounds to their profiles.
-* **Interactive command buttons:** In private messages, it would be useful to have commands displayed as interactive buttons. For example, pressing a button could send an explanation of a command or execute a specific command.
-* **Bot support for teams & groups:** Allow bots to be added to teams or groups. This could be useful for group management and organization, such as managing members, deleting messages, or preventing invitations from being sent within groups.
+* **Room design & construction:** Give bots access to the coordinates and placement of furniture in a room. This would let a bot copy an existing room's design or automatically rebuild a room from a saved layout.
+
+```python
+  # Get furniture positions, save as a template, then rebuild elsewhere
+  items = await bot.highrise.get_room_furniture()
+  template = [{"id": i.item_id, "x": i.x, "y": i.y, "z": i.z} for i in items]
+  await bot.highrise.place_furniture(**template[0])
+```
+
+* **Profile backgrounds:** The SDK already lets a bot equip outfit items with `set_outfit()`, picking from free items or the bot's own inventory. Profile backgrounds could work the exact same way — a `set_profile_background()` call that takes a background item the bot owns or one that's free to use, just like outfit items work today.
+
+* **Interactive command buttons:** In private messages, show commands as clickable buttons instead of typed text. Pressing a button triggers the command or shows its explanation.
+
+* **Bot support for teams & groups:** Allow bots to join teams/groups and manage them — e.g. managing members, deleting messages, or blocking invites.
 
 ### Ideas credited to @Community
 
