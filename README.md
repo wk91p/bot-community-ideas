@@ -22,6 +22,7 @@ This repository is intended as a simple place for the community to share ideas, 
 * **Bot recommendation & advertising system:** It would be useful to have a recommendation system for discovering useful bots, or even a way for bot developers to purchase advertising, similar to the existing promotion system for worlds.
 * **Bot trading:** It would be really cool if bots could create and accept trades. This could enable a lot of interesting features and systems to be built around trading, like creating a giveaway.
 * **Profile & World moderation:** Allow bot owners to grant bots moderation permissions for their own profile or World profile. Bots could automatically remove inappropriate comments, detect spam, and reply to comments or World reviews. This could also enable AI-powered moderation and automated responses for popular Worlds.
+* **Bot-powered profile messaging:** Allow users to connect a bot to their own profile and grant it permission to handle private messages on their behalf. The bot could automatically reply to incoming DMs, answer common questions, or assist with customer/support conversations. This would be especially useful for creators, businesses, and users who receive a lot of messages.
 
 ### Ideas credited to @VECTOR000
 
