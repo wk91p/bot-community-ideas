@@ -39,7 +39,19 @@ This repository is intended as a simple place for the community to share ideas, 
 
 * **Interactive command buttons:** In private messages, show commands as clickable buttons instead of typed text. Pressing a button triggers the command or shows its explanation.
 
-* **Bot support for teams & groups:** Allow bots to join teams/groups and manage them — e.g. managing members, deleting messages, or blocking invites.
+* **Bot support for teams:**
+  * Let the bot join a team only after receiving an invite, with the ability to accept or decline it.
+  * Let the bot send invites to people by username or ID.
+  * Give the bot a way to check users' event activity, with individual rankings as well as team/league rankings.
+  * Let the bot kick members or set a minimum ticket requirement for the event.
+
+* **Bot support for groups:**
+  * Let the bot send invites to people who have previously opened a chat with it.
+  * Let the bot remove members.
+  * Let the bot delete members' messages.
+  * Let the bot block invites from being sent, or stop members from sending messages, restricting that ability to moderators only.
+  * Let the bot send images.
+  * Let the bot create a poll/vote box.
 
 ### Ideas credited to @Community
 
